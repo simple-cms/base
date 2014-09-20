@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -129,6 +129,15 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
+    /*
+     * 1st Party Packages
+     */
+    'Illuminate\Html\HTMLServiceProvider',
+
+    'SimpleCms\Core\CoreServiceProvider',
+    'SimpleCms\Blog\BlogServiceProvider',
+    'SimpleCms\Page\PageServiceProvider',
+
 	],
 
 	/*
@@ -186,6 +195,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+    'Form'      => 'Illuminate\Html\FormFacade',
+    'Html'      => 'Illuminate\Html\HtmlFacade',
+
 
 	],
 

@@ -13,6 +13,6 @@
 
 $env = $app->detectEnvironment([
 
-	'local' => ['homestead'],
+	'local' => ['homestead', 'tom-work', 'tom-windows'],
 
 ]);
