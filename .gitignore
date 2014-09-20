@@ -4,3 +4,5 @@ composer.lock
 .env.*
 .DS_Store
 Thumbs.db
+workbench
+error_log
