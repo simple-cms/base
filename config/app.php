@@ -138,6 +138,7 @@ return [
     'SimpleCms\Blog\BlogServiceProvider',
     'SimpleCms\Page\PageServiceProvider',
     'SimpleCms\Asset\AssetServiceProvider',
+    'SimpleCms\User\UserServiceProvider',
 
 	],
 
