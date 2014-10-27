@@ -1,9 +1,8 @@
+/.idea
 /vendor
-composer.phar
-composer.lock
-.env.*
+.env
 .DS_Store
 Thumbs.db
-workbench
-error_log
-*.sublime-*
+composer.lock
+composer.phar
+/workbench
