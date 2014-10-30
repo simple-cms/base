@@ -78,7 +78,7 @@ return [
   |
   */
 
-  'key' => '2qh4hCmEBLuRdSHXkmAufXe7fAhXqbjX',
+  'key' => 'YourSecretKey!!!',
 
   'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -98,11 +98,7 @@ return [
     /*
      * Application Service Providers...
      */
-    'App\Providers\AppServiceProvider',
-    'App\Providers\ArtisanServiceProvider',
-    'App\Providers\ErrorServiceProvider',
     'App\Providers\EventServiceProvider',
-    'App\Providers\LogServiceProvider',
     'App\Providers\RouteServiceProvider',
 
     /*
@@ -112,6 +108,7 @@ return [
     'Illuminate\Auth\AuthServiceProvider',
     'Illuminate\Cache\CacheServiceProvider',
     'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
+    'Illuminate\Routing\ControllerServiceProvider',
     'Illuminate\Cookie\CookieServiceProvider',
     'Illuminate\Database\DatabaseServiceProvider',
     'Illuminate\Encryption\EncryptionServiceProvider',
@@ -123,11 +120,12 @@ return [
     'Illuminate\Pagination\PaginationServiceProvider',
     'Illuminate\Queue\QueueServiceProvider',
     'Illuminate\Redis\RedisServiceProvider',
-    'Illuminate\Auth\Reminders\ReminderServiceProvider',
+    'Illuminate\Auth\Passwords\PasswordResetServiceProvider',
     'Illuminate\Session\SessionServiceProvider',
     'Illuminate\Translation\TranslationServiceProvider',
     'Illuminate\Validation\ValidationServiceProvider',
     'Illuminate\View\ViewServiceProvider',
+
 
     /*
      * Laravel Framework Service Providers...
@@ -139,9 +137,7 @@ return [
      */
     'SimpleCms\Core\CoreServiceProvider',
     'SimpleCms\Blog\BlogServiceProvider',
-    'SimpleCms\Page\PageServiceProvider',
-    'SimpleCms\Asset\AssetServiceProvider',
-
+    'SimpleCms\Page\PageServiceProvider'
   ],
 
   /*
@@ -200,7 +196,6 @@ return [
     'Validator' => 'Illuminate\Support\Facades\Validator',
     'View'      => 'Illuminate\Support\Facades\View',
     'Form'      => 'Illuminate\Html\FormFacade'
-
   ],
 
 ];

@@ -1,8 +1,9 @@
 /.idea
 /vendor
+/node_modules
+/workbench
 .env
 .DS_Store
 Thumbs.db
 composer.lock
 composer.phar
-/workbench
