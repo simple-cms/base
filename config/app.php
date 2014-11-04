@@ -84,6 +84,21 @@ return [
 
   /*
   |--------------------------------------------------------------------------
+  | Logging Configuration
+  |--------------------------------------------------------------------------
+  |
+  | Here you may configure the log settings for your application. Out of
+  | the box, Laravel uses the Monolog PHP logging library. This gives
+  | you a variety of powerful log handlers / formatters to utilize.
+  |
+  | Available Settings: "single", "daily", "syslog"
+  |
+  */
+
+  'log' => 'daily',
+
+  /*
+  |--------------------------------------------------------------------------
   | Autoloaded Service Providers
   |--------------------------------------------------------------------------
   |
@@ -115,7 +130,6 @@ return [
     'Illuminate\Filesystem\FilesystemServiceProvider',
     'Illuminate\Foundation\Providers\FoundationServiceProvider',
     'Illuminate\Hashing\HashServiceProvider',
-    'Illuminate\Log\LogServiceProvider',
     'Illuminate\Mail\MailServiceProvider',
     'Illuminate\Pagination\PaginationServiceProvider',
     'Illuminate\Queue\QueueServiceProvider',
@@ -125,7 +139,6 @@ return [
     'Illuminate\Translation\TranslationServiceProvider',
     'Illuminate\Validation\ValidationServiceProvider',
     'Illuminate\View\ViewServiceProvider',
-
 
     /*
      * Laravel Framework Service Providers...
@@ -137,7 +150,8 @@ return [
      */
     'SimpleCms\Core\CoreServiceProvider',
     'SimpleCms\Blog\BlogServiceProvider',
-    'SimpleCms\Page\PageServiceProvider'
+    'SimpleCms\Page\PageServiceProvider',
+    'SimpleCms\Tag\TagServiceProvider'
   ],
 
   /*
@@ -195,6 +209,10 @@ return [
     'URL'       => 'Illuminate\Support\Facades\URL',
     'Validator' => 'Illuminate\Support\Facades\Validator',
     'View'      => 'Illuminate\Support\Facades\View',
+
+    /*
+     * Laravel Framework Facades...
+     */
     'Form'      => 'Illuminate\Html\FormFacade'
   ],
 
