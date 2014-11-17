@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use Illuminate\Routing\Router;
+use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider {
@@ -11,10 +12,9 @@ class RouteServiceProvider extends ServiceProvider {
 	 * @var array
 	 */
 	protected $middleware = [
-		'auth' => 'App\Http\Middleware\Authenticated',
-		'auth.basic' => 'App\Http\Middleware\AuthenticatedWithBasicAuth',
-		'csrf' => 'App\Http\Middleware\CsrfTokenIsValid',
-		'guest' => 'App\Http\Middleware\IsGuest',
+		'auth' => 'App\Http\Middleware\Authenticate',
+		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
+		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
 	];
 
 	/**
@@ -23,11 +23,12 @@ class RouteServiceProvider extends ServiceProvider {
 	 * Register any model bindings or pattern based filters.
 	 *
 	 * @param  \Illuminate\Routing\Router  $router
+	 * @param  \Illuminate\Contracts\Routing\UrlGenerator  $url
 	 * @return void
 	 */
-	public function before(Router $router)
+	public function before(Router $router, UrlGenerator $url)
 	{
-		//
+		$url->setRootControllerNamespace('App\Http\Controllers');
 	}
 
 	/**

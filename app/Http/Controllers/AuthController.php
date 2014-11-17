@@ -1,7 +1,8 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests\LoginRequest;
 use Illuminate\Contracts\Auth\Guard;
+
+use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 
 class AuthController extends Controller {
@@ -23,7 +24,7 @@ class AuthController extends Controller {
 	{
 		$this->auth = $auth;
 
-		$this->middleware('guest', ['except' => 'logout']);
+		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
 	/**
