@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG'),
+	'debug' => getenv('APP_DEBUG'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY') ?: 'YourSecretKey!!!',
+	'key' => 'YourSecretKey!!!',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -142,7 +142,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 
     /*
-     * Additional Service Providers...
+     * Laravel Framework Service Providers...
      */
     'Illuminate\Html\HTMLServiceProvider',
 
@@ -153,7 +153,6 @@ return [
     'SimpleCms\Blog\BlogServiceProvider',
     'SimpleCms\Page\PageServiceProvider',
     'SimpleCms\Tag\TagServiceProvider'
-
 	],
 
 	/*
@@ -195,7 +194,6 @@ return [
 		'File'      => 'Illuminate\Support\Facades\File',
 		'Hash'      => 'Illuminate\Support\Facades\Hash',
 		'Input'     => 'Illuminate\Support\Facades\Input',
-		'Inspiring' => 'Illuminate\Foundation\Inspiring',
 		'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',
 		'Mail'      => 'Illuminate\Support\Facades\Mail',
@@ -214,7 +212,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 
     /*
-     * Additional Framework Facades...
+     * Laravel Framework Facades...
      */
     'Form'      => 'Illuminate\Html\FormFacade'
 	],

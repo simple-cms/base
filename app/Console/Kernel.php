@@ -1,6 +1,6 @@
 <?php namespace App\Console;
 
-use Illuminate\Console\Scheduling\Schedule;
+use Exception;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel {
@@ -15,15 +15,26 @@ class Kernel extends ConsoleKernel {
 	];
 
 	/**
-	 * Define the application's command schedule.
+	 * Run the console application.
 	 *
-	 * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
-	 * @return void
+	 * @param  \Symfony\Component\Console\Input\InputInterface  $input
+	 * @param  \Symfony\Component\Console\Output\OutputInterface  $output
+	 * @return int
 	 */
-	protected function schedule(Schedule $schedule)
+	public function handle($input, $output = null)
 	{
-		$schedule->command('inspire')
-				 ->hourly();
+		try
+		{
+			return parent::handle($input, $output);
+		}
+		catch (Exception $e)
+		{
+			$this->reportException($e);
+
+			$this->renderException($output, $e);
+
+			return 1;
+		}
 	}
 
 }
