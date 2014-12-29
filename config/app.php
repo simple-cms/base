@@ -150,8 +150,6 @@ return [
      * SimpleCMS Service Providers
      */
     'SimpleCms\Core\CoreServiceProvider',
-    'SimpleCms\Media\MediaServiceProvider',
-    'SimpleCms\User\UserServiceProvider',
     'SimpleCms\Blog\BlogServiceProvider',
     'SimpleCms\Page\PageServiceProvider'
 	],
