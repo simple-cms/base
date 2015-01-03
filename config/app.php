@@ -151,7 +151,8 @@ return [
      */
     'SimpleCms\Core\CoreServiceProvider',
     'SimpleCms\Blog\BlogServiceProvider',
-    'SimpleCms\Page\PageServiceProvider'
+    'SimpleCms\Page\PageServiceProvider',
+    'SimpleCms\Tag\TagServiceProvider'
 	],
 
 	/*
