@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "525844f98414884397b30f04d7279d23",
+    "hash": "070a8ecf6c7cb4470ff6066314be3108",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1120,6 +1120,42 @@
                 "content managment system"
             ],
             "time": "2015-01-29 19:25:08"
+        },
+        {
+            "name": "simple-cms/user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simple-cms/user.git",
+                "reference": "4af89bc1c9c7a0cc8b2e701070fba2abba18a960"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simple-cms/user/zipball/4af89bc1c9c7a0cc8b2e701070fba2abba18a960",
+                "reference": "4af89bc1c9c7a0cc8b2e701070fba2abba18a960",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.0.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "SimpleCms\\User\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tom Green",
+                    "email": "tom@beingtomgreen.com"
+                }
+            ],
+            "time": "2014-12-29 11:13:24"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2980,7 +3016,8 @@
         "illuminate/html": 20,
         "simple-cms/core": 20,
         "simple-cms/page": 20,
-        "simple-cms/blog": 20
+        "simple-cms/blog": 20,
+        "simple-cms/user": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
