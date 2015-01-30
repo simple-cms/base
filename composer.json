@@ -5,31 +5,32 @@
   "license": "MIT",
   "type": "project",
   "require": {
-    "laravel/framework": "dev-master#81614916082260c524b5a178e896f3f0ce79b820",
-    "illuminate/html": "5.*",
+    "laravel/framework": "5.0.*@dev",
+    "illuminate/html": "dev-master",
     "simple-cms/core": "dev-master",
     "simple-cms/page": "dev-master",
-    "simple-cms/blog": "dev-master",
-    "simple-cms/tag": "dev-master",
-    "simple-cms/sitemap": "dev-master"
+    "simple-cms/blog": "dev-master"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.0"
+    "phpunit/phpunit": "~4.0",
+    "phpspec/phpspec": "~2.1"
   },
   "autoload": {
     "classmap": [
-      "database",
-      "tests/TestCase.php"
+      "database"
     ],
     "psr-4": {
       "App\\": "app/"
     }
   },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  },
   "scripts": {
     "post-install-cmd": [
       "php artisan clear-compiled",
-      "php artisan route:scan",
-      "php artisan event:scan",
       "php artisan optimize"
     ],
     "post-update-cmd": [
@@ -37,11 +38,11 @@
       "php artisan optimize"
     ],
     "post-create-project-cmd": [
+      "php -r \"copy('.env.example', '.env');\"",
       "php artisan key:generate"
     ]
   },
   "config": {
     "preferred-install": "dist"
-  },
-  "minimum-stability": "dev"
+  }
 }

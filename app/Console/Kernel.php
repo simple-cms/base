@@ -1,40 +1,29 @@
 <?php namespace App\Console;
 
-use Exception;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel {
 
-	/**
-	 * The Artisan commands provided by your application.
-	 *
-	 * @var array
-	 */
-	protected $commands = [
-		'App\Console\Commands\InspireCommand',
-	];
+  /**
+   * The Artisan commands provided by your application.
+   *
+   * @var array
+   */
+  protected $commands = [
+    'App\Console\Commands\Inspire',
+  ];
 
-	/**
-	 * Run the console application.
-	 *
-	 * @param  \Symfony\Component\Console\Input\InputInterface  $input
-	 * @param  \Symfony\Component\Console\Output\OutputInterface  $output
-	 * @return int
-	 */
-	public function handle($input, $output = null)
-	{
-		try
-		{
-			return parent::handle($input, $output);
-		}
-		catch (Exception $e)
-		{
-			$this->reportException($e);
-
-			$this->renderException($output, $e);
-
-			return 1;
-		}
-	}
+  /**
+   * Define the application's command schedule.
+   *
+   * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+   * @return void
+   */
+  protected function schedule(Schedule $schedule)
+  {
+    $schedule->command('inspire')
+         ->hourly();
+  }
 
 }
