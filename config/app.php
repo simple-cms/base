@@ -155,6 +155,7 @@ return [
      */
     'SimpleCms\Core\CoreServiceProvider',
     'SimpleCms\Blog\BlogServiceProvider',
+    'SimpleCms\User\UserServiceProvider',
     'SimpleCms\Page\PageServiceProvider'
 
   ],
